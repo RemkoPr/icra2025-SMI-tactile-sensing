@@ -1,4 +1,4 @@
-# icra2025-SMI-tactile-sensing
+# ICRA2025: Self-Mixing Laser Interferometry for Robotic Tactile Sensing
 
 The source files in this repo are provided as-is, additional support for recreating the design can be requested, see contact information below.
 
