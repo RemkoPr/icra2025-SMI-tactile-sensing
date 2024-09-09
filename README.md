@@ -5,8 +5,11 @@ The source files in this repo are provided as-is, additional support for recreat
 ### Repo structure
 
 `code` contains readout code for the fingertips. In the paper, the SMI fingertip was read by an Arduino UNO, the microphone was read by an Arduino MKR 1000 WiFi.
+
 `data` contains the data files used in the paper.
+
 `mechanical-design` contains SolidWorks design files for the structural parts of the fingertips.
+
 `pcb-design` contains KiCad design files for the PCBs.
 
 ### Contact
