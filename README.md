@@ -35,7 +35,7 @@ The MKR1000 firmware (`code > arduino > microphone`) was used for the paper, the
 
 ## Laser specifics
 
-The readout frequency when read with an Arduino UNO was 3.7kHz, and 18kHz with our [Halberd coupling](https://github.com/RemkoPr/airo-halberd/tree/main) (or equivalently with an Arduino Nano 33 BLE, same microcontroller unit). When using higher readout frequency, turn off the anti-aliasing filter with the on-PCB slide switch.
+The readout frequency when read with an Arduino UNO was 3.7kHz, and 18kHz with our [Halberd coupling](https://github.com/RemkoPr/airo-halberd/tree/main) (or equivalently with an Arduino Nano 33 BLE, same microcontroller unit). When using higher readout frequency, turn off the 2kHz anti-aliasing filter with the on-PCB slide switch.
 
 
 # Contact
