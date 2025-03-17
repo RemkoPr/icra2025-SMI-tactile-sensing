@@ -14,7 +14,7 @@
 
 # User Guide
 
-<img align="right" width="200" height="281" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mold.png">
+<img align="right" width="250" height="250" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mold.png">
 The info in this paragraph is relevant for both the microphone and the laser.
 Order the PCBs (`pcb-design > microphone` and `pcb-design > laser`) from your favorite manufacturer, refer to the BOM in the main directory of this repo for required parts.
 Print the .stl files in `mechanical-design`.
