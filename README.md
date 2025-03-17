@@ -21,17 +21,20 @@ Print the .stl files in `mechanical-design`.
 The process of moulding the silicone contact surface is illustrated by the graphic on the right. To keep the "sensor cavity insert" in the right position, fix it with hot glue. It is recommended to attach the "mounting interface" to the fingertip while curing, so that the silicone has less chance to leak.
 
 <BR CLEAR="all">
-## Microphone specifics
 
+## Microphone specifics
 
 <img align="left" width="200" height="281" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mic_electrical.png">
 
 On the PCB, you must set the microphone to either by left or right channel, this will determine during which phase of the I2S communication cycle the microphone sends its data. Do this by soldering a bridge as indicated on the image (the readout code in this repo was tested for left channel, so with a bridge soldered from the middle pad to the L pad).
 
+The MKR1000 firmware (`code > arduino > microphone`) was used for the paper, the wiring is explained in the top rows of the `I2S_MKR1000.ino` file. The `I2S_ArduinoNanoBLE_16kHz` is a first attempt at a readout implementation for the Arduino Nano 33 BLE, for which the standard I2S library isn't implemented.
 
 <BR CLEAR="all">
 
 ## Laser specifics
+
+
 
 # Contact
 
