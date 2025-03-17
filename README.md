@@ -2,7 +2,7 @@
 
 [[Paper](https://arxiv.org/abs/2502.15390)] The source files in this repo are provided as-is, additional support for recreating the design can be requested, see contact information below.
 
-### Repo structure
+# Repo structure
 
 `code` contains readout code for the fingertips. In the paper, the SMI fingertip was read by an Arduino UNO, the microphone was read by an Arduino MKR 1000 WiFi.
 
@@ -12,6 +12,21 @@
 
 `pcb-design` contains KiCad design files for the PCBs.
 
-### Contact
+# User Guide
+
+## Microphone
+
+<img align="left" width="200" height="281" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mic_electrical.png">
+
+Order the PCB (`pcb-design > microphone`) from your favorite manufacturer, refer to the BOM in the main directory of this repo for required parts.
+On the PCB, you must set the microphone to either by left or right channel, this will determine during which phase of the I2S communication cycle the microphone sends its data. Do this by soldering a bridge as indicated on the image (the readout code in this repo was tested for left channel, so with a bridge soldered from the middle pad to the L pad).
+
+Print the .stl files in `mechanical-design > microphone`.
+
+<BR CLEAR="all">
+
+## Laser
+
+# Contact
 
 For support regarding the design files in this repo, raise an issue or contact me at remko.proesmans@ugent.be.
