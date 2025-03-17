@@ -4,7 +4,9 @@
 
 # Repo structure
 
-`code` contains readout code for the fingertips. In the paper, the SMI fingertip was read by an Arduino UNO, the microphone was read by an Arduino MKR 1000 WiFi.
+`code > arduino` contains readout firmware for the fingertips. In the paper, the SMI fingertip was read by an Arduino UNO or our [Halberd coupling](https://github.com/RemkoPr/airo-halberd/tree/main), the microphone was read by an Arduino MKR 1000 WiFi.
+
+`code > python` contains code to communicate with the readout microcontrollers from a remote machine over a serial connection.
 
 `data` contains the data files used in the paper.
 
@@ -17,9 +19,12 @@
 <img align="right" width="250" height="250" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mold.png">
 
 The info in this paragraph is relevant for both the microphone and the laser.
+
 Order the PCBs (`pcb-design > microphone` and `pcb-design > laser`) from your favorite manufacturer, refer to the BOM in the main directory of this repo for required parts.
 Print the .stl files in `mechanical-design`.
 The process of moulding the silicone contact surface is illustrated by the graphic on the right. To keep the "sensor cavity insert" in the right position, fix it with hot glue. It is recommended to attach the "mounting interface" to the fingertip while curing, so that the silicone has less chance to leak.
+
+
 
 <BR CLEAR="all">
 
@@ -31,12 +36,14 @@ On the PCB, you must set the microphone to either by left or right channel, this
 
 The MKR1000 firmware (`code > arduino > microphone`) was used for the paper, the wiring is explained in the top rows of the `I2S_MKR1000.ino` file. The `I2S_ArduinoNanoBLE_16kHz` is a first attempt at a readout implementation for the Arduino Nano 33 BLE, for which the standard I2S library isn't implemented.
 
+To run the Python code (`code > python`), run `python -m code.python.communication.readers.micmanip_serial_reader`. The data is published to a CycloneDDS topic MicManip. You can visualise it using `python -m code.python.visualisation.visualisers.micmanip_spectrogram_visualiser MicManip`
 <BR CLEAR="all">
 
 ## Laser specifics
 
 The readout frequency when read with an Arduino UNO was 3.7kHz, and 18kHz with our [Halberd coupling](https://github.com/RemkoPr/airo-halberd/tree/main) (or equivalently with an Arduino Nano 33 BLE, same microcontroller unit). When using higher readout frequency, turn off the 2kHz anti-aliasing filter with the on-PCB slide switch.
 
+To run the Python code (`code > python`), run `python -m code.python.communication.readers.laserslip_serial_reader`. The data is published to a CycloneDDS topic LaserSlip. You can visualise it using `python -m code.python.visualisation.visualisers.laserslip_spectrogram_visualiser LaserSlip`
 
 # Contact
 
