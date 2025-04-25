@@ -1,6 +1,6 @@
 # ICRA2025: Self-Mixing Laser Interferometry for Robotic Tactile Sensing
 
-[[Paper](https://arxiv.org/abs/2502.15390)] The source files in this repo are provided as-is, additional support for recreating the design can be requested, see contact information below.
+[[Main Paper](https://arxiv.org/abs/2502.15390), [Follow-up](https://arxiv.org/abs/2504.13711)] The source files in this repo are provided as-is, additional support for recreating the design can be requested, see contact information below.
 
 # Repo structure
 
