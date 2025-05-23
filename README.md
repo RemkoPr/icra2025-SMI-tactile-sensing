@@ -41,6 +41,8 @@ To run the Python code (`code > python`), run `python -m code.python.communicati
 
 ## Laser specifics
 
+⚠️ The SMI circuit has a ~5 min warmup time before microvibrations can be measured.
+
 The readout frequency when read with an Arduino UNO was 3.7kHz, and 18kHz with our [Halberd coupling](https://github.com/RemkoPr/airo-halberd/tree/main) (or equivalently with an Arduino Nano 33 BLE, same microcontroller unit). When using higher readout frequency, turn off the 2kHz anti-aliasing filter with the on-PCB slide switch.
 
 To run the Python code (`code > python`), run `python -m code.python.communication.readers.laserslip_serial_reader`. The data is published to a CycloneDDS topic LaserSlip. You can visualise it using `python -m code.python.visualisation.visualisers.laserslip_spectrogram_visualiser LaserSlip`
