@@ -14,6 +14,8 @@
 
 `pcb-design` contains KiCad design files for the PCBs.
 
+For the spectrogram classificatier used in the [follow-up paper](https://arxiv.org/abs/2504.13711), see [this repo](https://github.com/tlpss/ast).
+
 # User Guide
 
 <img align="right" width="250" height="250" src="https://github.com/RemkoPr/icra2025-SMI-tactile-sensing/blob/main/img/mold.png">
